@@ -40,7 +40,7 @@ python --version
 
 ```bash
 git clone https://github.com/vedantparikh21/The-classic-Game-.git
-cd snake-game
+cd .\The-classic-Game-\
 ```
 
 Replace `your-username` with your actual GitHub username.
