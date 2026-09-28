@@ -43,8 +43,6 @@ git clone https://github.com/vedantparikh21/The-classic-Game-.git
 cd .\The-classic-Game-\
 ```
 
-Replace `your-username` with your actual GitHub username.
-
 ### 3. Run the Game
 
 ```bash
