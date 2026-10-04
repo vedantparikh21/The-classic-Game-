@@ -15,10 +15,11 @@ A simple, minimalist **retro Nokia-style Snake Game** built with Python's built-
 
 | Key       | Action     |
 | --------- | ---------- |
-| `W` / `↑` | Move Up    |
-| `A` / `←` | Move Left  |
-| `S` / `↓` | Move Down  |
-| `D` / `→` | Move Right |
+| `w` / `↑` | Move Up    |
+| `a` / `←` | Move Left  |
+| `s` / `↓` | Move Down  |
+| `d` / `→` | Move Right |
+|    `e`    | Exit Game  |
 
 ## 🚀 How to Run
 
@@ -57,6 +58,10 @@ Enjoy the game! 🐍🎮
 snake-game/
 │
 ├── main.py
+├── scoreboard.py
+├── food.py
+├── snake.py
+├── high_score.txt
 └── README.md
 ```
 
