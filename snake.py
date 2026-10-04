@@ -25,6 +25,14 @@ class Snake:
         snake_body.goto(position)
         self.snake_block.append(snake_body)
 
+    def reset(self):
+        '''Reset the snake position'''
+        for segment in self.snake_block:
+            segment.goto(1000,1000)
+        self.snake_block.clear() #clears the snake body -> functionality of an list
+        self.create_snake()
+        self.head = self.snake_block[0]
+
     def extend(self):
         self.add_body(self.snake_block[-1].position()) # get turtle's current location
         # pass

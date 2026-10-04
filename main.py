@@ -33,8 +33,14 @@ screen.onkey(snake.right,'d')
 screen.onkey(snake.left,'Left')
 screen.onkey(snake.left,'a')
 
-
 game_is_on = True
+
+def exit_game():
+    global game_is_on
+    game_is_on = False
+    # scoreboard.game_over()
+
+screen.onkey(exit_game,'e') # -> exit functionality
 
 while game_is_on:
     screen.update()
@@ -50,15 +56,14 @@ while game_is_on:
     # detect wall collision
     if (snake.head.xcor() > COLLIDE_X or snake.head.xcor() < -COLLIDE_X or 
         snake.head.ycor() > COLLIDE_Y or snake.head.ycor() < -COLLIDE_Y):
-        game_is_on = False
-        scoreboard.game_over()
+        scoreboard.reset_score()
+        snake.reset()
 
     # detect collision with the same body
     for segment in snake.snake_block[1 : ]:
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.game_over()
+            scoreboard.reset_score()
+            snake.reset()
 
 
-
-screen.exitonclick()
+# screen.exitonclick()
